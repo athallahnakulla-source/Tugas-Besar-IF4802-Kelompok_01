@@ -32,12 +32,25 @@ void createListParent(list_ojol &LO);
 address_ojol createElemenParent(infotype_ojol x);
 void insertFirstParent(list_ojol &LO, address_ojol O);
 void insertLastParent(list_ojol &LO, address_ojol O);
-void insertAfterParent(list_ojol &LO address_ojol prec, address_ojol O);
+void insertAfterParent(list_ojol &LO, address_ojol prec, address_ojol O);
 void deleteFirstParent(list_ojol &LO, address_ojol &O);
 void deleteLastParent(list_ojol &LO, address_ojol &O);
 void deleteAfterParent(list_ojol &LO, address_ojol prec, address_ojol &O);
 address_ojol findElemenParent(list_ojol &LO, string info);
 void viewParent(list_ojol LO);
+
+bool isEmptyOjol(list_ojol LO);
+
+void insertFirstChild(address_ojol O, address_penumpang P);
+void insertLastChild(address_ojol O, address_penumpang P);
+void insertAfterChild(address_ojol O, address_penumpang prec, address_penumpang P);
+void deleteFirstChild(address_ojol O, address_penumpang &P);
+void deleteLastChild(address_ojol O, address_penumpang &P);
+void deleteAfterChild(address_ojol O, address_penumpang prec, address_penumpang &P);
+address_penumpang findElemenChild(address_ojol O, string infop);
+void viewChild(address_ojol O);
+
+bool isEmptyPenumpang(address_ojol O);
 
 
 

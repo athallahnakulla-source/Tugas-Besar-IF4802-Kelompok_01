@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1764957248 source:d:\new folder (2)\tugas-besar-if4802-kelompok_01\main.cpp
+	<iostream>
+	"Ojol.h"
+	"Penumpang.h"
+
+1764957195 d:\new folder (2)\tugas-besar-if4802-kelompok_01\ojol.h
+	<iostream>
+	"Penumpang.h"
+
+1764956714 d:\new folder (2)\tugas-besar-if4802-kelompok_01\penumpang.h
+	<iostream>
+
+1764957433 source:d:\new folder (2)\tugas-besar-if4802-kelompok_01\main_admin.cpp
+	<iostream>
+
+1764957439 source:d:\new folder (2)\tugas-besar-if4802-kelompok_01\main_user.cpp
+	<iostream>
+
+1764953420 source:d:\new folder (2)\tugas-besar-if4802-kelompok_01\ojol_103012400039.cpp
+	<iostream>
+	"Ojol.h"
+
+1764953132 source:d:\new folder (2)\tugas-besar-if4802-kelompok_01\penumpang_103012400039.cpp
+	<iostream>
+	"Penumpang.h"
+	"Ojol.h"
+
+1764957649 source:d:\new folder (2)\tugas-besar-if4802-kelompok_01\penumpang_103012400365.cpp
+	<iostream>
+	"Penumpang.h"
+	"Ojol.h"
+
+1764957542 source:d:\new folder (2)\tugas-besar-if4802-kelompok_01\ojol_103012400365.cpp
+	<iostream>
+	"Ojol.h"
+
