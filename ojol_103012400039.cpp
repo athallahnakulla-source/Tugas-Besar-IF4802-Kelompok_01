@@ -44,11 +44,15 @@ void deleteAfterParent(list_ojol &LO, address_ojol prec, address_ojol &O){
 
 address_ojol findElemenParent(list_ojol &LO, string info){
     address_ojol P = LO.first;
+
     while(P != nullptr){
         if(P->info_ojol.nama_ojol == info){
-            break;
+            return P;      
+        } else {
+            P = P->next;   
         }
-        P = P->next;
     }
-    return P;
+
+    return nullptr;       
 }
+
