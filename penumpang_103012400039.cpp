@@ -1,6 +1,5 @@
 #include <iostream>
-#include "Penumpang.h"
-#include "Ojol.h"
+#include "header.h"
 
 using namespace std;
 
@@ -48,10 +47,7 @@ void insertAfterChild(address_ojol O, address_penumpang prec, address_penumpang 
 
 address_penumpang findElemenChild(address_ojol O, string infop){
     address_penumpang C = O->first_penumpang;
-    while(C != nullptr){
-        if(C->info_penumpang.nama_penumpang == infop){
-            break;
-        }
+    while(C != nullptr && C->info_penumpang.nama_penumpang != infop){
         C = C->next;
     }
     return C;

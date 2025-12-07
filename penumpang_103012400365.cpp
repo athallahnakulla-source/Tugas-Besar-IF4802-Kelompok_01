@@ -1,6 +1,5 @@
 #include <iostream>
-#include "Penumpang.h"
-#include "Ojol.h"
+#include "header.h"
 
 using namespace std;
 
