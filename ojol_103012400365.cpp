@@ -62,8 +62,8 @@ void viewParent(list_ojol L) {
         address_ojol P = L.first;
         int i = 1;
 
+        cout << "==============================" << endl;
         while (P != NULL) {
-            cout << "==============================" << endl;
             cout << "Data Ojek ke-" << i << endl;
             cout << "Nama Ojek   : " << P->info_ojol.nama_ojol << endl;
 
@@ -76,13 +76,53 @@ void viewParent(list_ojol L) {
             }
             cout << "Jumlah Penumpang: " << count << endl;
 
-            cout << "==============================" << endl << endl;
+            cout << "==============================" << endl;
 
             P = P->next;
             i++;
         }
     }
 }
+
+void dataDump(list_ojol &LO) {
+
+    // ==========================
+    // 10 DATA PARENT MANUAL
+    // ==========================
+
+    infotype_ojol o1 = {"Budi", "D1234AA", "Motor", "0811", "Aktif", "Bandung", 30};
+    infotype_ojol o2 = {"Andi", "D5678BB", "Motor", "0822", "Aktif", "Bandung", 27};
+    infotype_ojol o3 = {"Sandi", "D1111CC", "Mobil", "0833", "Nonaktif", "Cimahi", 35};
+    infotype_ojol o4 = {"Rizal", "D2222DD", "Motor", "0844", "Aktif", "Soreang", 28};
+    infotype_ojol o5 = {"Fikri", "D3333EE", "Motor", "0855", "Aktif", "Cicalengka", 29};
+
+    address_ojol A1 = createElemenParent(o1);
+    address_ojol A2 = createElemenParent(o2);
+    address_ojol A3 = createElemenParent(o3);
+    address_ojol A4 = createElemenParent(o4);
+    address_ojol A5 = createElemenParent(o5);
+
+    insertLastParent(LO, A1);
+    insertLastParent(LO, A2);
+    insertLastParent(LO, A3);
+    insertLastParent(LO, A4);
+    insertLastParent(LO, A5);
+
+    insertLastChild(A1, createElemenChild({"Rina", "089111", "Bandung", "Cicendo", 20}));
+    insertLastChild(A1, createElemenChild({"Doni", "089112", "Cimahi", "Bandung", 25}));
+
+    insertLastChild(A2, createElemenChild({"Siti", "089221", "Antapani", "Cibiru", 22}));
+
+    insertLastChild(A3, createElemenChild({"Agus", "089331", "Cimahi", "Cimindi", 30}));
+    insertLastChild(A3, createElemenChild({"Mira", "089332", "Cimahi", "Alun-Alun", 19}));
+    insertLastChild(A3, createElemenChild({"Yanto", "089333", "Cimahi", "Pasar", 24}));
+
+    insertLastChild(A4, createElemenChild({"Lala", "089441", "Soreang", "Banjaran", 21}));
+
+    insertLastChild(A5, createElemenChild({"Nanda", "089551", "Cicalengka", "Cileunyi", 23}));
+    insertLastChild(A5, createElemenChild({"Yuni", "089552", "Cicalengka", "Gedebage", 22}));
+}
+
 
 
 

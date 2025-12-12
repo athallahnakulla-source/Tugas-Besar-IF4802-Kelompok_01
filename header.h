@@ -4,6 +4,25 @@
 
 using namespace std;
 
+struct data_penumpang {
+    string nama_penumpang;
+    string noHP;
+    string daerah_asal;
+    string daerah_tujuan;
+    int umur_penumpang;
+
+};
+
+typedef data_penumpang infotype_penumpang;
+
+typedef struct elemen_penumpang *address_penumpang;
+
+struct elemen_penumpang {
+    infotype_penumpang info_penumpang;
+    address_penumpang next;
+    address_penumpang prev;
+};
+
 struct data_ojol {
     string nama_ojol;
     string plat_nomor;
@@ -25,25 +44,6 @@ struct elemen_ojol {
 };
 struct list_ojol {
     address_ojol first;
-};
-
-struct data_penumpang {
-    string nama_penumpang;
-    string noHP;
-    string daerah_asal;
-    string daerah_tujuan;
-    int umur_penumpang;
-
-};
-
-typedef data_penumpang infotype_penumpang;
-
-typedef struct elemen_penumpang *address_penumpang;
-
-struct elemen_penumpang {
-    infotype_penumpang info_penumpang;
-    address_penumpang next;
-    address_penumpang prev;
 };
 
 void createListParent(list_ojol &LO);
@@ -69,6 +69,10 @@ address_penumpang findElemenChild(address_ojol O, string infop);
 void viewChild(address_ojol O);
 bool isEmptyPenumpang(address_ojol O);
 
+int main_admin();
+int main_user();
 
+extern list_ojol LO;
+void dataDump(list_ojol &LO);
 
 #endif // OJOL_H_INCLUDED
